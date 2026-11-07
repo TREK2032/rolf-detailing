@@ -1,0 +1,504 @@
+<html>
+<head>
+<title>index.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+.s4 { color: #7a7e85;}
+.s5 { color: #2aacb8;}
+.s6 { color: #56a8f5;}
+.s7 { color: #cf8e6d; font-weight: bold;}
+.s8 { color: #cf8e6d;}
+</style>
+</head>
+<body bgcolor="#191a1c">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+index.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;ru&quot; </span><span class="s2">class</span><span class="s3">=&quot;scroll-smooth&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot; </span><span class="s0">/&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">name</span><span class="s3">=&quot;viewport&quot; </span><span class="s2">content</span><span class="s3">=&quot;width=device-width, initial-scale=1.0&quot; </span><span class="s0">/&gt;</span>
+    <span class="s0">&lt;title&gt;</span><span class="s1">BLACK LINE × РОЛЬФ | Детейлинг студия</span><span class="s0">&lt;/title&gt;</span>
+
+    <span class="s4">&lt;!-- Подключение Tailwind CSS --&gt;</span>
+    <span class="s0">&lt;script </span><span class="s2">src</span><span class="s3">=&quot;https://cdn.tailwindcss.com&quot;</span><span class="s0">&gt;&lt;/script&gt;</span>
+    <span class="s0">&lt;script&gt;</span>
+        <span class="s1">tailwind.config = {</span>
+            <span class="s1">theme: {</span>
+                <span class="s1">extend: {</span>
+                    <span class="s1">colors: {</span>
+                        <span class="s1">brand: {</span>
+                            <span class="s1">gold: </span><span class="s3">'#eab308'</span><span class="s1">,</span>
+                            <span class="s1">hover: </span><span class="s3">'#ca8a04'</span><span class="s1">,</span>
+                            <span class="s1">accent: </span><span class="s3">'#facc15'</span><span class="s1">,</span>
+                            <span class="s1">dark: </span><span class="s3">'#0a0a0c'</span><span class="s1">,</span>
+                            <span class="s1">card: </span><span class="s3">'#141418'</span><span class="s1">,</span>
+                            <span class="s1">cardHover: </span><span class="s3">'#1a1a20'</span><span class="s1">,</span>
+                            <span class="s1">border: </span><span class="s3">'#27272a'</span>
+                        <span class="s1">}</span>
+                    <span class="s1">}</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+    <span class="s0">&lt;/script&gt;</span>
+
+    <span class="s0">&lt;style&gt;</span>
+        <span class="s1">.</span><span class="s0">package-card </span><span class="s1">{</span>
+            <span class="s2">transition</span><span class="s1">: </span><span class="s3">all </span><span class="s5">0.25</span><span class="s3">s ease</span><span class="s1">;</span>
+        <span class="s1">}</span>
+        <span class="s1">.</span><span class="s0">package-card</span><span class="s1">.</span><span class="s0">selected </span><span class="s1">{</span>
+            <span class="s2">border-color</span><span class="s1">: </span><span class="s6">#eab308 </span><span class="s7">!important</span><span class="s1">;</span>
+            <span class="s2">box-shadow</span><span class="s1">: </span><span class="s5">0 0 30</span><span class="s3">px </span><span class="s0">rgba</span><span class="s1">(</span><span class="s5">234</span><span class="s1">, </span><span class="s5">179</span><span class="s1">, </span><span class="s5">8</span><span class="s1">, </span><span class="s5">0.25</span><span class="s1">);</span>
+            <span class="s2">transform</span><span class="s1">: </span><span class="s0">translateY</span><span class="s1">(-</span><span class="s5">4</span><span class="s3">px</span><span class="s1">);</span>
+        <span class="s1">}</span>
+    <span class="s0">&lt;/style&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+
+<span class="s0">&lt;body </span><span class="s2">class</span><span class="s3">=&quot;bg-brand-dark text-zinc-100 font-sans antialiased selection:bg-brand-gold selection:text-black min-h-screen flex flex-col justify-between&quot;</span><span class="s0">&gt;</span>
+
+<span class="s4">&lt;!-- Фиксированная шапка сайта --&gt;</span>
+<span class="s0">&lt;header </span><span class="s2">class</span><span class="s3">=&quot;fixed top-0 left-0 right-0 z-40 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;max-w-6xl mx-auto px-4 h-16 flex items-center justify-between&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#&quot; </span><span class="s2">class</span><span class="s3">=&quot;text-base sm:text-lg font-black tracking-widest text-white flex items-center gap-2&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;w-2.5 h-2.5 rounded-full bg-brand-gold animate-pulse&quot;</span><span class="s0">&gt;&lt;/span&gt;</span>
+            <span class="s1">BLACK</span><span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;text-brand-gold&quot;</span><span class="s0">&gt;</span><span class="s1">LINE</span><span class="s0">&lt;/span&gt;</span>
+            <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;text-zinc-500 font-normal text-xs sm:text-sm hidden sm:inline&quot;</span><span class="s0">&gt;</span><span class="s1">× РОЛЬФ Ясенево</span><span class="s0">&lt;/span&gt;</span>
+        <span class="s0">&lt;/a&gt;</span>
+
+        <span class="s0">&lt;nav </span><span class="s2">class</span><span class="s3">=&quot;hidden md:flex items-center gap-6 text-sm text-zinc-400&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#services&quot; </span><span class="s2">class</span><span class="s3">=&quot;hover:text-white transition&quot;</span><span class="s0">&gt;</span><span class="s1">Услуги</span><span class="s0">&lt;/a&gt;</span>
+            <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#packages&quot; </span><span class="s2">class</span><span class="s3">=&quot;hover:text-white transition&quot;</span><span class="s0">&gt;</span><span class="s1">Пакеты и цены</span><span class="s0">&lt;/a&gt;</span>
+            <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#location&quot; </span><span class="s2">class</span><span class="s3">=&quot;hover:text-white transition&quot;</span><span class="s0">&gt;</span><span class="s1">Локация</span><span class="s0">&lt;/a&gt;</span>
+            <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#booking&quot; </span><span class="s2">class</span><span class="s3">=&quot;hover:text-white transition&quot;</span><span class="s0">&gt;</span><span class="s1">Запись</span><span class="s0">&lt;/a&gt;</span>
+        <span class="s0">&lt;/nav&gt;</span>
+
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;flex items-center gap-3&quot;</span><span class="s0">&gt;</span>
+            <span class="s4">&lt;!-- Реальный телефон для быстрого набора --&gt;</span>
+            <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;tel:+74951278386&quot; </span><span class="s2">class</span><span class="s3">=&quot;text-xs sm:text-sm font-semibold text-zinc-300 hover:text-brand-gold transition whitespace-nowrap&quot;</span><span class="s0">&gt;</span>
+                <span class="s1">+7 (495) 127-83-86</span>
+            <span class="s0">&lt;/a&gt;</span>
+
+            <span class="s4">&lt;!-- Прямая кнопка в WhatsApp --&gt;</span>
+            <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;https://wa.me/74951278386&quot; </span><span class="s2">target</span><span class="s3">=&quot;_blank&quot;</span>
+               <span class="s2">class</span><span class="s3">=&quot;hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-semibold hover:bg-emerald-500/20 transition&quot;</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;span&gt;</span><span class="s1">WhatsApp</span><span class="s0">&lt;/span&gt;</span>
+            <span class="s0">&lt;/a&gt;</span>
+
+            <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#booking&quot; </span><span class="s2">class</span><span class="s3">=&quot;bg-brand-gold hover:bg-brand-hover text-black text-xs font-bold py-2 px-3.5 rounded-lg transition&quot;</span><span class="s0">&gt;</span>
+                <span class="s1">Записаться</span>
+            <span class="s0">&lt;/a&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+    <span class="s0">&lt;/div&gt;</span>
+<span class="s0">&lt;/header&gt;</span>
+
+<span class="s0">&lt;main </span><span class="s2">class</span><span class="s3">=&quot;flex-grow pt-24&quot;</span><span class="s0">&gt;</span>
+    <span class="s4">&lt;!-- Hero Секция --&gt;</span>
+    <span class="s0">&lt;section </span><span class="s2">class</span><span class="s3">=&quot;py-12 sm:py-20 px-4 max-w-5xl mx-auto text-center flex flex-col items-center&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-brand-border text-xs text-brand-gold mb-6 font-medium&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;span&gt;</span><span class="s1">📍 РОЛЬФ Ясенево • Москва, МКАД 40-й км, вл. 7</span><span class="s0">&lt;/span&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+
+        <span class="s0">&lt;h1 </span><span class="s2">class</span><span class="s3">=&quot;text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight max-w-4xl&quot;</span><span class="s0">&gt;</span>
+            <span class="s1">Премиальный детейлинг авто с гарантией </span><span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-amber-200&quot;</span><span class="s0">&gt;</span><span class="s1">до 5 лет</span><span class="s0">&lt;/span&gt;</span>
+        <span class="s0">&lt;/h1&gt;</span>
+
+        <span class="s0">&lt;p </span><span class="s2">class</span><span class="s3">=&quot;mt-4 text-zinc-400 text-sm sm:text-base max-w-2xl&quot;</span><span class="s0">&gt;</span>
+            <span class="s1">Защитная оклейка премиальным полиуретаном, глубокая восстановительная полировка и керамические составы 9H на базе официального сервисного центра.</span>
+        <span class="s0">&lt;/p&gt;</span>
+
+        <span class="s4">&lt;!-- Преимущества в цифрах --&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;grid grid-cols-3 gap-3 w-full max-w-xl mt-8&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;p-3 rounded-xl bg-brand-card border border-brand-border&quot;</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;text-xl sm:text-2xl font-bold text-brand-gold&quot;</span><span class="s0">&gt;</span><span class="s1">1 200+</span><span class="s0">&lt;/div&gt;</span>
+                <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;text-[11px] sm:text-xs text-zinc-400 mt-1&quot;</span><span class="s0">&gt;</span><span class="s1">Авто защищено</span><span class="s0">&lt;/div&gt;</span>
+            <span class="s0">&lt;/div&gt;</span>
+            <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;p-3 rounded-xl bg-brand-card border border-brand-border&quot;</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;text-xl sm:text-2xl font-bold text-brand-gold&quot;</span><span class="s0">&gt;</span><span class="s1">5 лет</span><span class="s0">&lt;/div&gt;</span>
+                <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;text-[11px] sm:text-xs text-zinc-400 mt-1&quot;</span><span class="s0">&gt;</span><span class="s1">Гарантия на пленку</span><span class="s0">&lt;/div&gt;</span>
+            <span class="s0">&lt;/div&gt;</span>
+            <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;p-3 rounded-xl bg-brand-card border border-brand-border&quot;</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;text-xl sm:text-2xl font-bold text-brand-gold&quot;</span><span class="s0">&gt;</span><span class="s1">24/7</span><span class="s0">&lt;/div&gt;</span>
+                <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;text-[11px] sm:text-xs text-zinc-400 mt-1&quot;</span><span class="s0">&gt;</span><span class="s1">Охраняемый бокс</span><span class="s0">&lt;/div&gt;</span>
+            <span class="s0">&lt;/div&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;mt-8 flex flex-col sm:flex-row gap-3 w-full sm:w-auto&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#packages&quot; </span><span class="s2">class</span><span class="s3">=&quot;bg-brand-gold hover:bg-brand-hover text-black font-bold py-3.5 px-8 rounded-xl transition text-center shadow-lg shadow-brand-gold/20&quot;</span><span class="s0">&gt;</span>
+                <span class="s1">Выбрать комплекс</span>
+            <span class="s0">&lt;/a&gt;</span>
+            <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#booking&quot; </span><span class="s2">class</span><span class="s3">=&quot;bg-zinc-900 hover:bg-zinc-800 border border-brand-border text-white font-medium py-3.5 px-8 rounded-xl transition text-center&quot;</span><span class="s0">&gt;</span>
+                <span class="s1">Получить скидку 10%</span>
+            <span class="s0">&lt;/a&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+    <span class="s0">&lt;/section&gt;</span>
+
+    <span class="s4">&lt;!-- Секция Услуг --&gt;</span>
+    <span class="s0">&lt;section </span><span class="s2">id</span><span class="s3">=&quot;services&quot; </span><span class="s2">class</span><span class="s3">=&quot;py-16 px-4 max-w-6xl mx-auto border-t border-brand-border/60&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;text-center mb-12&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;h2 </span><span class="s2">class</span><span class="s3">=&quot;text-2xl sm:text-4xl font-extrabold text-white&quot;</span><span class="s0">&gt;</span><span class="s1">Услуги детейлинг-центра</span><span class="s0">&lt;/h2&gt;</span>
+            <span class="s0">&lt;p </span><span class="s2">class</span><span class="s3">=&quot;text-sm text-zinc-400 mt-2&quot;</span><span class="s0">&gt;</span><span class="s1">Работаем только с сертифицированной автохимией и полиуретаном премиум-класса</span><span class="s0">&lt;/p&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;p-6 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-gold/50 transition duration-300&quot;</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;w-12 h-12 rounded-xl bg-zinc-900 flex items-center justify-center text-brand-gold mb-5&quot;</span><span class="s0">&gt;</span>
+                    <span class="s0">&lt;svg </span><span class="s2">class</span><span class="s3">=&quot;w-6 h-6&quot; </span><span class="s2">fill</span><span class="s3">=&quot;none&quot; </span><span class="s2">stroke</span><span class="s3">=&quot;currentColor&quot; </span><span class="s2">viewBox</span><span class="s3">=&quot;0 0 24 24&quot;</span><span class="s0">&gt;&lt;path </span><span class="s2">stroke-linecap</span><span class="s3">=&quot;round&quot; </span><span class="s2">stroke-linejoin</span><span class="s3">=&quot;round&quot; </span><span class="s2">stroke-width</span><span class="s3">=&quot;2&quot; </span><span class="s2">d</span><span class="s3">=&quot;M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z&quot;</span><span class="s0">/&gt;&lt;/svg&gt;</span>
+                <span class="s0">&lt;/div&gt;</span>
+                <span class="s0">&lt;h3 </span><span class="s2">class</span><span class="s3">=&quot;text-lg font-bold text-white&quot;</span><span class="s0">&gt;</span><span class="s1">Бронепленка (PPF)</span><span class="s0">&lt;/h3&gt;</span>
+                <span class="s0">&lt;p </span><span class="s2">class</span><span class="s3">=&quot;text-zinc-400 text-xs sm:text-sm mt-2 leading-relaxed&quot;</span><span class="s0">&gt;</span><span class="s1">Надежная защита кузова от гравия, пескоструя и царапин с эффектом самозаживления от тепла.</span><span class="s0">&lt;/p&gt;</span>
+                <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;mt-4 pt-4 border-t border-brand-border flex items-center justify-between text-xs&quot;</span><span class="s0">&gt;</span>
+                    <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;text-zinc-400&quot;</span><span class="s0">&gt;</span><span class="s1">Срок: от 2 дней</span><span class="s0">&lt;/span&gt;</span>
+                    <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;text-brand-gold font-bold text-sm&quot;</span><span class="s0">&gt;</span><span class="s1">от 45 000 ₽</span><span class="s0">&lt;/span&gt;</span>
+                <span class="s0">&lt;/div&gt;</span>
+            <span class="s0">&lt;/div&gt;</span>
+
+            <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;p-6 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-gold/50 transition duration-300&quot;</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;w-12 h-12 rounded-xl bg-zinc-900 flex items-center justify-center text-brand-gold mb-5&quot;</span><span class="s0">&gt;</span>
+                    <span class="s0">&lt;svg </span><span class="s2">class</span><span class="s3">=&quot;w-6 h-6&quot; </span><span class="s2">fill</span><span class="s3">=&quot;none&quot; </span><span class="s2">stroke</span><span class="s3">=&quot;currentColor&quot; </span><span class="s2">viewBox</span><span class="s3">=&quot;0 0 24 24&quot;</span><span class="s0">&gt;&lt;path </span><span class="s2">stroke-linecap</span><span class="s3">=&quot;round&quot; </span><span class="s2">stroke-linejoin</span><span class="s3">=&quot;round&quot; </span><span class="s2">stroke-width</span><span class="s3">=&quot;2&quot; </span><span class="s2">d</span><span class="s3">=&quot;M13 10V3L4 14h7v7l9-11h-7z&quot;</span><span class="s0">/&gt;&lt;/svg&gt;</span>
+                <span class="s0">&lt;/div&gt;</span>
+                <span class="s0">&lt;h3 </span><span class="s2">class</span><span class="s3">=&quot;text-lg font-bold text-white&quot;</span><span class="s0">&gt;</span><span class="s1">Восстановительная полировка</span><span class="s0">&lt;/h3&gt;</span>
+                <span class="s0">&lt;p </span><span class="s2">class</span><span class="s3">=&quot;text-zinc-400 text-xs sm:text-sm mt-2 leading-relaxed&quot;</span><span class="s0">&gt;</span><span class="s1">Удаление до 95% микропаутинки и голограмм. Возвращение глубокого зеркального блеска заводского лака.</span><span class="s0">&lt;/p&gt;</span>
+                <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;mt-4 pt-4 border-t border-brand-border flex items-center justify-between text-xs&quot;</span><span class="s0">&gt;</span>
+                    <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;text-zinc-400&quot;</span><span class="s0">&gt;</span><span class="s1">Срок: от 1 дня</span><span class="s0">&lt;/span&gt;</span>
+                    <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;text-brand-gold font-bold text-sm&quot;</span><span class="s0">&gt;</span><span class="s1">от 16 000 ₽</span><span class="s0">&lt;/span&gt;</span>
+                <span class="s0">&lt;/div&gt;</span>
+            <span class="s0">&lt;/div&gt;</span>
+
+            <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;p-6 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-gold/50 transition duration-300&quot;</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;w-12 h-12 rounded-xl bg-zinc-900 flex items-center justify-center text-brand-gold mb-5&quot;</span><span class="s0">&gt;</span>
+                    <span class="s0">&lt;svg </span><span class="s2">class</span><span class="s3">=&quot;w-6 h-6&quot; </span><span class="s2">fill</span><span class="s3">=&quot;none&quot; </span><span class="s2">stroke</span><span class="s3">=&quot;currentColor&quot; </span><span class="s2">viewBox</span><span class="s3">=&quot;0 0 24 24&quot;</span><span class="s0">&gt;&lt;path </span><span class="s2">stroke-linecap</span><span class="s3">=&quot;round&quot; </span><span class="s2">stroke-linejoin</span><span class="s3">=&quot;round&quot; </span><span class="s2">stroke-width</span><span class="s3">=&quot;2&quot; </span><span class="s2">d</span><span class="s3">=&quot;M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z&quot;</span><span class="s0">/&gt;&lt;/svg&gt;</span>
+                <span class="s0">&lt;/div&gt;</span>
+                <span class="s0">&lt;h3 </span><span class="s2">class</span><span class="s3">=&quot;text-lg font-bold text-white&quot;</span><span class="s0">&gt;</span><span class="s1">Керамика 9H</span><span class="s0">&lt;/h3&gt;</span>
+                <span class="s0">&lt;p </span><span class="s2">class</span><span class="s3">=&quot;text-zinc-400 text-xs sm:text-sm mt-2 leading-relaxed&quot;</span><span class="s0">&gt;</span><span class="s1">Экстремальный гидрофобный щит: кузов дольше остается чистым, защищен от выгорания на солнце и дорожной химии.</span><span class="s0">&lt;/p&gt;</span>
+                <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;mt-4 pt-4 border-t border-brand-border flex items-center justify-between text-xs&quot;</span><span class="s0">&gt;</span>
+                    <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;text-zinc-400&quot;</span><span class="s0">&gt;</span><span class="s1">Срок: 1 день</span><span class="s0">&lt;/span&gt;</span>
+                    <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;text-brand-gold font-bold text-sm&quot;</span><span class="s0">&gt;</span><span class="s1">от 22 000 ₽</span><span class="s0">&lt;/span&gt;</span>
+                <span class="s0">&lt;/div&gt;</span>
+            <span class="s0">&lt;/div&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+    <span class="s0">&lt;/section&gt;</span>
+
+    <span class="s4">&lt;!-- Секция Пакетов с интерактивным выбором --&gt;</span>
+    <span class="s0">&lt;section </span><span class="s2">id</span><span class="s3">=&quot;packages&quot; </span><span class="s2">class</span><span class="s3">=&quot;py-16 px-4 max-w-6xl mx-auto border-t border-brand-border/60&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;text-center mb-10&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;h2 </span><span class="s2">class</span><span class="s3">=&quot;text-2xl sm:text-4xl font-extrabold text-white&quot;</span><span class="s0">&gt;</span><span class="s1">Комплексные пакеты</span><span class="s0">&lt;/h2&gt;</span>
+            <span class="s0">&lt;p </span><span class="s2">class</span><span class="s3">=&quot;text-sm text-zinc-400 mt-2&quot;</span><span class="s0">&gt;</span><span class="s1">Выберите пакет в один клик — форма записи заполнится и рассчитает скидку автоматически</span><span class="s0">&lt;/p&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;</span><span class="s0">&gt;</span>
+
+            <span class="s4">&lt;!-- Карточка 1 --&gt;</span>
+            <span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;card-basic&quot; </span><span class="s2">class</span><span class="s3">=&quot;package-card bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between&quot;</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;div&gt;</span>
+                    <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;flex items-center justify-between&quot;</span><span class="s0">&gt;</span>
+                        <span class="s0">&lt;h3 </span><span class="s2">class</span><span class="s3">=&quot;text-lg font-bold text-white&quot;</span><span class="s0">&gt;</span><span class="s1">Базовый уход</span><span class="s0">&lt;/h3&gt;</span>
+                        <span class="s0">&lt;span </span><span class="s2">id</span><span class="s3">=&quot;badge-basic&quot; </span><span class="s2">class</span><span class="s3">=&quot;hidden text-[10px] font-bold bg-brand-gold text-black px-2 py-0.5 rounded-full uppercase&quot;</span><span class="s0">&gt;</span><span class="s1">✓ Выбран</span><span class="s0">&lt;/span&gt;</span>
+                    <span class="s0">&lt;/div&gt;</span>
+                    <span class="s0">&lt;p </span><span class="s2">class</span><span class="s3">=&quot;text-xs text-zinc-400 mt-1&quot;</span><span class="s0">&gt;</span><span class="s1">Освежить автомобиль к сезону</span><span class="s0">&lt;/p&gt;</span>
+                    <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;text-3xl font-black text-white mt-5&quot;</span><span class="s0">&gt;</span><span class="s1">24 900 ₽</span><span class="s0">&lt;/div&gt;</span>
+
+                    <span class="s0">&lt;ul </span><span class="s2">class</span><span class="s3">=&quot;mt-6 space-y-2.5 text-xs text-zinc-300&quot;</span><span class="s0">&gt;</span>
+                        <span class="s0">&lt;li </span><span class="s2">class</span><span class="s3">=&quot;flex items-center gap-2&quot;</span><span class="s0">&gt;</span><span class="s1">✓ Трехфазная детейлинг-мойка</span><span class="s0">&lt;/li&gt;</span>
+                        <span class="s0">&lt;li </span><span class="s2">class</span><span class="s3">=&quot;flex items-center gap-2&quot;</span><span class="s0">&gt;</span><span class="s1">✓ Антиголограммная полировка кузова</span><span class="s0">&lt;/li&gt;</span>
+                        <span class="s0">&lt;li </span><span class="s2">class</span><span class="s3">=&quot;flex items-center gap-2&quot;</span><span class="s0">&gt;</span><span class="s1">✓ Кварцевое гидрофобное покрытие</span><span class="s0">&lt;/li&gt;</span>
+                        <span class="s0">&lt;li </span><span class="s2">class</span><span class="s3">=&quot;flex items-center gap-2&quot;</span><span class="s0">&gt;</span><span class="s1">✓ Комплексная влажная уборка салона</span><span class="s0">&lt;/li&gt;</span>
+                    <span class="s0">&lt;/ul&gt;</span>
+                <span class="s0">&lt;/div&gt;</span>
+
+                <span class="s0">&lt;button </span><span class="s2">type</span><span class="s3">=&quot;button&quot;</span>
+                        <span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">selectPackage(</span><span class="s3">'basic'</span><span class="s1">, </span><span class="s3">'Базовый уход'</span><span class="s1">, </span><span class="s5">24900</span><span class="s1">)</span><span class="s3">&quot;</span>
+                        <span class="s2">class</span><span class="s3">=&quot;select-btn mt-6 w-full py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-brand-border font-bold text-xs text-white transition&quot;</span><span class="s0">&gt;</span>
+                    <span class="s1">Выбрать пакет</span>
+                <span class="s0">&lt;/button&gt;</span>
+            <span class="s0">&lt;/div&gt;</span>
+
+            <span class="s4">&lt;!-- Карточка 2 (Хит) --&gt;</span>
+            <span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;card-shield&quot; </span><span class="s2">class</span><span class="s3">=&quot;package-card bg-brand-card border-2 border-brand-gold/60 rounded-2xl p-6 flex flex-col justify-between relative shadow-xl shadow-brand-gold/5&quot;</span><span class="s0">&gt;</span>
+          <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-gold text-black text-[10px] font-black uppercase tracking-wider py-0.5 px-3 rounded-full&quot;</span><span class="s0">&gt;</span>
+            <span class="s1">Топ выбор</span>
+          <span class="s0">&lt;/span&gt;</span>
+                <span class="s0">&lt;div&gt;</span>
+                    <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;flex items-center justify-between&quot;</span><span class="s0">&gt;</span>
+                        <span class="s0">&lt;h3 </span><span class="s2">class</span><span class="s3">=&quot;text-lg font-bold text-white&quot;</span><span class="s0">&gt;</span><span class="s1">Керамический щит</span><span class="s0">&lt;/h3&gt;</span>
+                        <span class="s0">&lt;span </span><span class="s2">id</span><span class="s3">=&quot;badge-shield&quot; </span><span class="s2">class</span><span class="s3">=&quot;hidden text-[10px] font-bold bg-brand-gold text-black px-2 py-0.5 rounded-full uppercase&quot;</span><span class="s0">&gt;</span><span class="s1">✓ Выбран</span><span class="s0">&lt;/span&gt;</span>
+                    <span class="s0">&lt;/div&gt;</span>
+                    <span class="s0">&lt;p </span><span class="s2">class</span><span class="s3">=&quot;text-xs text-zinc-400 mt-1&quot;</span><span class="s0">&gt;</span><span class="s1">Восстановление глянца и защита 9H</span><span class="s0">&lt;/p&gt;</span>
+                    <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;text-3xl font-black text-brand-gold mt-5&quot;</span><span class="s0">&gt;</span><span class="s1">49 900 ₽</span><span class="s0">&lt;/div&gt;</span>
+
+                    <span class="s0">&lt;ul </span><span class="s2">class</span><span class="s3">=&quot;mt-6 space-y-2.5 text-xs text-zinc-200&quot;</span><span class="s0">&gt;</span>
+                        <span class="s0">&lt;li </span><span class="s2">class</span><span class="s3">=&quot;flex items-center gap-2&quot;</span><span class="s0">&gt;</span><span class="s1">✓ Глубокая абразивная полировка кузова</span><span class="s0">&lt;/li&gt;</span>
+                        <span class="s0">&lt;li </span><span class="s2">class</span><span class="s3">=&quot;flex items-center gap-2&quot;</span><span class="s0">&gt;</span><span class="s1">✓ 2 слоя керамического покрытия 9H</span><span class="s0">&lt;/li&gt;</span>
+                        <span class="s0">&lt;li </span><span class="s2">class</span><span class="s3">=&quot;flex items-center gap-2&quot;</span><span class="s0">&gt;</span><span class="s1">✓ Покрытие «Антидождь» на все стекла</span><span class="s0">&lt;/li&gt;</span>
+                        <span class="s0">&lt;li </span><span class="s2">class</span><span class="s3">=&quot;flex items-center gap-2&quot;</span><span class="s0">&gt;</span><span class="s1">✓ Уход и консервация кожи салона</span><span class="s0">&lt;/li&gt;</span>
+                    <span class="s0">&lt;/ul&gt;</span>
+                <span class="s0">&lt;/div&gt;</span>
+
+                <span class="s0">&lt;button </span><span class="s2">type</span><span class="s3">=&quot;button&quot;</span>
+                        <span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">selectPackage(</span><span class="s3">'shield'</span><span class="s1">, </span><span class="s3">'Керамический щит'</span><span class="s1">, </span><span class="s5">49900</span><span class="s1">)</span><span class="s3">&quot;</span>
+                        <span class="s2">class</span><span class="s3">=&quot;select-btn mt-6 w-full py-3 rounded-xl bg-brand-gold hover:bg-brand-hover text-black font-extrabold text-xs transition&quot;</span><span class="s0">&gt;</span>
+                    <span class="s1">Выбрать пакет</span>
+                <span class="s0">&lt;/button&gt;</span>
+            <span class="s0">&lt;/div&gt;</span>
+
+            <span class="s4">&lt;!-- Карточка 3 --&gt;</span>
+            <span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;card-total&quot; </span><span class="s2">class</span><span class="s3">=&quot;package-card bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between&quot;</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;div&gt;</span>
+                    <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;flex items-center justify-between&quot;</span><span class="s0">&gt;</span>
+                        <span class="s0">&lt;h3 </span><span class="s2">class</span><span class="s3">=&quot;text-lg font-bold text-white&quot;</span><span class="s0">&gt;</span><span class="s1">Total Protection</span><span class="s0">&lt;/h3&gt;</span>
+                        <span class="s0">&lt;span </span><span class="s2">id</span><span class="s3">=&quot;badge-total&quot; </span><span class="s2">class</span><span class="s3">=&quot;hidden text-[10px] font-bold bg-brand-gold text-black px-2 py-0.5 rounded-full uppercase&quot;</span><span class="s0">&gt;</span><span class="s1">✓ Выбран</span><span class="s0">&lt;/span&gt;</span>
+                    <span class="s0">&lt;/div&gt;</span>
+                    <span class="s0">&lt;p </span><span class="s2">class</span><span class="s3">=&quot;text-xs text-zinc-400 mt-1&quot;</span><span class="s0">&gt;</span><span class="s1">Бронирование кузова полиуретаном</span><span class="s0">&lt;/p&gt;</span>
+                    <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;text-3xl font-black text-white mt-5&quot;</span><span class="s0">&gt;</span><span class="s1">139 000 ₽</span><span class="s0">&lt;/div&gt;</span>
+
+                    <span class="s0">&lt;ul </span><span class="s2">class</span><span class="s3">=&quot;mt-6 space-y-2.5 text-xs text-zinc-300&quot;</span><span class="s0">&gt;</span>
+                        <span class="s0">&lt;li </span><span class="s2">class</span><span class="s3">=&quot;flex items-center gap-2&quot;</span><span class="s0">&gt;</span><span class="s1">✓ Оклейка передней части авто в PPF</span><span class="s0">&lt;/li&gt;</span>
+                        <span class="s0">&lt;li </span><span class="s2">class</span><span class="s3">=&quot;flex items-center gap-2&quot;</span><span class="s0">&gt;</span><span class="s1">✓ Керамика на остальные зоны кузова</span><span class="s0">&lt;/li&gt;</span>
+                        <span class="s0">&lt;li </span><span class="s2">class</span><span class="s3">=&quot;flex items-center gap-2&quot;</span><span class="s0">&gt;</span><span class="s1">✓ Детейлинг салона с озонацией</span><span class="s0">&lt;/li&gt;</span>
+                        <span class="s0">&lt;li </span><span class="s2">class</span><span class="s3">=&quot;flex items-center gap-2&quot;</span><span class="s0">&gt;</span><span class="s1">✓ Гарантийная поддержка 3 года</span><span class="s0">&lt;/li&gt;</span>
+                    <span class="s0">&lt;/ul&gt;</span>
+                <span class="s0">&lt;/div&gt;</span>
+
+                <span class="s0">&lt;button </span><span class="s2">type</span><span class="s3">=&quot;button&quot;</span>
+                        <span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">selectPackage(</span><span class="s3">'total'</span><span class="s1">, </span><span class="s3">'Total Protection'</span><span class="s1">, </span><span class="s5">139000</span><span class="s1">)</span><span class="s3">&quot;</span>
+                        <span class="s2">class</span><span class="s3">=&quot;select-btn mt-6 w-full py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-brand-border font-bold text-xs text-white transition&quot;</span><span class="s0">&gt;</span>
+                    <span class="s1">Выбрать пакет</span>
+                <span class="s0">&lt;/button&gt;</span>
+            <span class="s0">&lt;/div&gt;</span>
+
+        <span class="s0">&lt;/div&gt;</span>
+    <span class="s0">&lt;/section&gt;</span>
+
+    <span class="s4">&lt;!-- Секция Формы --&gt;</span>
+    <span class="s0">&lt;section </span><span class="s2">id</span><span class="s3">=&quot;booking&quot; </span><span class="s2">class</span><span class="s3">=&quot;py-16 px-4 max-w-2xl mx-auto border-t border-brand-border/60&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;bg-brand-card border border-brand-border p-6 sm:p-8 rounded-3xl shadow-2xl&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;h2 </span><span class="s2">class</span><span class="s3">=&quot;text-2xl font-bold text-center text-white&quot;</span><span class="s0">&gt;</span><span class="s1">Запись на детейлинг</span><span class="s0">&lt;/h2&gt;</span>
+            <span class="s0">&lt;p </span><span class="s2">class</span><span class="s3">=&quot;text-xs text-zinc-400 text-center mt-1&quot;</span><span class="s0">&gt;</span><span class="s1">Оставьте заявку и зафиксируйте скидку 10% на первый заказ</span><span class="s0">&lt;/p&gt;</span>
+
+            <span class="s0">&lt;form </span><span class="s2">id</span><span class="s3">=&quot;orderForm&quot; </span><span class="s2">onsubmit</span><span class="s3">=&quot;</span><span class="s1">submitForm(event)</span><span class="s3">&quot; </span><span class="s2">class</span><span class="s3">=&quot;mt-8 space-y-4&quot;</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;div&gt;</span>
+                    <span class="s0">&lt;label </span><span class="s2">class</span><span class="s3">=&quot;block text-xs font-semibold text-zinc-400 uppercase mb-1&quot;</span><span class="s0">&gt;</span><span class="s1">Марка и модель автомобиля</span><span class="s0">&lt;/label&gt;</span>
+                    <span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;text&quot; </span><span class="s2">id</span><span class="s3">=&quot;carModel&quot; </span><span class="s2">required placeholder</span><span class="s3">=&quot;Например: BMW M5 / Geely Monjaro&quot;</span>
+                           <span class="s2">class</span><span class="s3">=&quot;w-full bg-zinc-900 border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition&quot; </span><span class="s0">/&gt;</span>
+                <span class="s0">&lt;/div&gt;</span>
+
+                <span class="s0">&lt;div&gt;</span>
+                    <span class="s0">&lt;label </span><span class="s2">class</span><span class="s3">=&quot;block text-xs font-semibold text-zinc-400 uppercase mb-1&quot;</span><span class="s0">&gt;</span><span class="s1">Номер телефона</span><span class="s0">&lt;/label&gt;</span>
+                    <span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;tel&quot; </span><span class="s2">id</span><span class="s3">=&quot;userPhone&quot; </span><span class="s2">required placeholder</span><span class="s3">=&quot;+7 (___) ___-__-__&quot;</span>
+                           <span class="s2">class</span><span class="s3">=&quot;w-full bg-zinc-900 border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition&quot; </span><span class="s0">/&gt;</span>
+                <span class="s0">&lt;/div&gt;</span>
+
+                <span class="s0">&lt;div&gt;</span>
+                    <span class="s0">&lt;label </span><span class="s2">class</span><span class="s3">=&quot;block text-xs font-semibold text-zinc-400 uppercase mb-1&quot;</span><span class="s0">&gt;</span><span class="s1">Выбранный комплекс</span><span class="s0">&lt;/label&gt;</span>
+                    <span class="s0">&lt;select </span><span class="s2">id</span><span class="s3">=&quot;packageSelect&quot; </span><span class="s2">onchange</span><span class="s3">=&quot;</span><span class="s1">handleSelectChange(</span><span class="s8">this</span><span class="s1">.value)</span><span class="s3">&quot;</span>
+                            <span class="s2">class</span><span class="s3">=&quot;w-full bg-zinc-900 border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition&quot;</span><span class="s0">&gt;</span>
+                        <span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;none&quot;</span><span class="s0">&gt;</span><span class="s1">Индивидуальный расчет / Другая услуга</span><span class="s0">&lt;/option&gt;</span>
+                        <span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;basic&quot;</span><span class="s0">&gt;</span><span class="s1">Комплекс «Базовый уход» (24 900 ₽)</span><span class="s0">&lt;/option&gt;</span>
+                        <span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;shield&quot;</span><span class="s0">&gt;</span><span class="s1">Комплекс «Керамический щит» (49 900 ₽)</span><span class="s0">&lt;/option&gt;</span>
+                        <span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;total&quot;</span><span class="s0">&gt;</span><span class="s1">Комплекс «Total Protection» (139 000 ₽)</span><span class="s0">&lt;/option&gt;</span>
+                    <span class="s0">&lt;/select&gt;</span>
+                <span class="s0">&lt;/div&gt;</span>
+
+                <span class="s4">&lt;!-- Блок интерактивного расчета цены --&gt;</span>
+                <span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;priceCalculationBox&quot; </span><span class="s2">class</span><span class="s3">=&quot;hidden p-4 rounded-xl bg-zinc-900 border border-brand-border space-y-1 text-xs&quot;</span><span class="s0">&gt;</span>
+                    <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;flex justify-between text-zinc-400&quot;</span><span class="s0">&gt;</span>
+                        <span class="s0">&lt;span&gt;</span><span class="s1">Базовая стоимость:</span><span class="s0">&lt;/span&gt;</span>
+                        <span class="s0">&lt;span </span><span class="s2">id</span><span class="s3">=&quot;basePriceDisplay&quot; </span><span class="s2">class</span><span class="s3">=&quot;font-medium text-white&quot;</span><span class="s0">&gt;</span><span class="s1">0 ₽</span><span class="s0">&lt;/span&gt;</span>
+                    <span class="s0">&lt;/div&gt;</span>
+                    <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;flex justify-between text-emerald-400 font-medium&quot;</span><span class="s0">&gt;</span>
+                        <span class="s0">&lt;span&gt;</span><span class="s1">Скидка при бронировании онлайн (-10%):</span><span class="s0">&lt;/span&gt;</span>
+                        <span class="s0">&lt;span </span><span class="s2">id</span><span class="s3">=&quot;discountDisplay&quot;</span><span class="s0">&gt;</span><span class="s1">-0 ₽</span><span class="s0">&lt;/span&gt;</span>
+                    <span class="s0">&lt;/div&gt;</span>
+                    <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;pt-2 border-t border-brand-border flex justify-between text-sm font-bold text-brand-gold&quot;</span><span class="s0">&gt;</span>
+                        <span class="s0">&lt;span&gt;</span><span class="s1">Итого со скидкой:</span><span class="s0">&lt;/span&gt;</span>
+                        <span class="s0">&lt;span </span><span class="s2">id</span><span class="s3">=&quot;finalPriceDisplay&quot;</span><span class="s0">&gt;</span><span class="s1">0 ₽</span><span class="s0">&lt;/span&gt;</span>
+                    <span class="s0">&lt;/div&gt;</span>
+                <span class="s0">&lt;/div&gt;</span>
+
+                <span class="s0">&lt;button </span><span class="s2">type</span><span class="s3">=&quot;submit&quot;</span>
+                        <span class="s2">class</span><span class="s3">=&quot;w-full bg-brand-gold hover:bg-brand-hover text-black font-extrabold py-3.5 rounded-xl text-sm transition duration-200 mt-2&quot;</span><span class="s0">&gt;</span>
+                    <span class="s1">Забронировать со скидкой 10%</span>
+                <span class="s0">&lt;/button&gt;</span>
+            <span class="s0">&lt;/form&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+    <span class="s0">&lt;/section&gt;</span>
+
+    <span class="s4">&lt;!-- Секция Контакты и реальная локация РОЛЬФ Ясенево --&gt;</span>
+    <span class="s0">&lt;section </span><span class="s2">id</span><span class="s3">=&quot;location&quot; </span><span class="s2">class</span><span class="s3">=&quot;py-12 px-4 max-w-6xl mx-auto border-t border-brand-border/60&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;bg-brand-card border border-brand-border rounded-3xl p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;space-y-3 text-center md:text-left&quot;</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-brand-border text-xs text-brand-gold font-medium&quot;</span><span class="s0">&gt;</span>
+                    <span class="s1">📍 Официальный дилерский комплекс</span>
+                <span class="s0">&lt;/div&gt;</span>
+                <span class="s0">&lt;h3 </span><span class="s2">class</span><span class="s3">=&quot;text-2xl font-bold text-white&quot;</span><span class="s0">&gt;</span><span class="s1">РОЛЬФ Ясенево</span><span class="s0">&lt;/h3&gt;</span>
+                <span class="s0">&lt;p </span><span class="s2">class</span><span class="s3">=&quot;text-zinc-400 text-sm max-w-md&quot;</span><span class="s0">&gt;</span>
+                    <span class="s1">г. Москва, МКАД, 40-й километр, вл. 7</span><span class="s0">&lt;br /&gt;</span>
+                    <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;text-xs text-zinc-500&quot;</span><span class="s0">&gt;</span><span class="s1">Удобный съезд со МКАД, бесплатная гостевая парковка и зона отдыха</span><span class="s0">&lt;/span&gt;</span>
+                <span class="s0">&lt;/p&gt;</span>
+                <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;text-sm text-zinc-300 font-medium&quot;</span><span class="s0">&gt;</span>
+                    <span class="s1">Режим работы: ежедневно с 09:00 до 21:00</span>
+                <span class="s0">&lt;/div&gt;</span>
+            <span class="s0">&lt;/div&gt;</span>
+
+            <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;flex flex-col sm:flex-row gap-3 w-full md:w-auto&quot;</span><span class="s0">&gt;</span>
+                <span class="s4">&lt;!-- Прямая ссылка открывает точку РОЛЬФ Ясенево в Яндекс Навигаторе --&gt;</span>
+                <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;https://yandex.ru/maps/?text=Москва+МКАД+40-й+километр+вл7+РОЛЬФ+Ясенево&quot; </span><span class="s2">target</span><span class="s3">=&quot;_blank&quot;</span>
+                   <span class="s2">class</span><span class="s3">=&quot;py-3 px-6 bg-zinc-900 hover:bg-zinc-800 border border-brand-border text-white text-xs font-bold rounded-xl text-center transition flex items-center justify-center gap-2&quot;</span><span class="s0">&gt;</span>
+                    <span class="s0">&lt;span&gt;</span><span class="s1">🗺️ Маршрут в Яндекс Картах</span><span class="s0">&lt;/span&gt;</span>
+                <span class="s0">&lt;/a&gt;</span>
+
+                <span class="s4">&lt;!-- Кнопка быстрого вызова --&gt;</span>
+                <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;tel:+74951278386&quot;</span>
+                   <span class="s2">class</span><span class="s3">=&quot;py-3 px-6 bg-brand-gold hover:bg-brand-hover text-black text-xs font-extrabold rounded-xl text-center transition&quot;</span><span class="s0">&gt;</span>
+                    <span class="s1">Позвонить в салон</span>
+                <span class="s0">&lt;/a&gt;</span>
+            <span class="s0">&lt;/div&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+    <span class="s0">&lt;/section&gt;</span>
+<span class="s0">&lt;/main&gt;</span>
+
+<span class="s4">&lt;!-- Футер --&gt;</span>
+<span class="s0">&lt;footer </span><span class="s2">class</span><span class="s3">=&quot;border-t border-brand-border py-8 px-4 text-xs text-zinc-500&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;div&gt;</span>
+            <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;font-bold text-white text-sm&quot;</span><span class="s0">&gt;</span><span class="s1">BLACK</span><span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;text-brand-gold&quot;</span><span class="s0">&gt;</span><span class="s1">LINE</span><span class="s0">&lt;/span&gt; </span><span class="s1">× РОЛЬФ</span><span class="s0">&lt;/span&gt;</span>
+            <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;block sm:inline sm:ml-2&quot;</span><span class="s0">&gt;</span><span class="s1">Москва, МКАД 40-й км, вл. 7</span><span class="s0">&lt;/span&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;flex gap-4&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;tel:+74951278386&quot; </span><span class="s2">class</span><span class="s3">=&quot;hover:text-white transition&quot;</span><span class="s0">&gt;</span><span class="s1">+7 (495) 127-83-86</span><span class="s0">&lt;/a&gt;</span>
+            <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;https://wa.me/74951278386&quot; </span><span class="s2">target</span><span class="s3">=&quot;_blank&quot; </span><span class="s2">class</span><span class="s3">=&quot;hover:text-emerald-400 transition&quot;</span><span class="s0">&gt;</span><span class="s1">WhatsApp</span><span class="s0">&lt;/a&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+        <span class="s0">&lt;div&gt;</span><span class="s1">© 2026. Все права защищены.</span><span class="s0">&lt;/div&gt;</span>
+    <span class="s0">&lt;/div&gt;</span>
+<span class="s0">&lt;/footer&gt;</span>
+
+<span class="s4">&lt;!-- Модальное окно подтверждения --&gt;</span>
+<span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;modalOverlay&quot; </span><span class="s2">class</span><span class="s3">=&quot;fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 hidden&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;bg-brand-card border border-brand-gold/40 rounded-2xl p-6 sm:p-8 max-w-md w-full shadow-2xl text-center&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;w-12 h-12 rounded-full bg-brand-gold/10 border border-brand-gold text-brand-gold flex items-center justify-center mx-auto text-xl mb-4&quot;</span><span class="s0">&gt;</span>
+            <span class="s1">✓</span>
+        <span class="s0">&lt;/div&gt;</span>
+        <span class="s0">&lt;h3 </span><span class="s2">class</span><span class="s3">=&quot;text-xl font-bold text-white&quot;</span><span class="s0">&gt;</span><span class="s1">Заявка успешно принята!</span><span class="s0">&lt;/h3&gt;</span>
+        <span class="s0">&lt;p </span><span class="s2">class</span><span class="s3">=&quot;text-xs text-zinc-400 mt-2&quot;</span><span class="s0">&gt;</span><span class="s1">Информация передана мастеру-приемщику РОЛЬФ Ясенево. Перезвоним в течение 10 минут для подтверждения времени визита.</span><span class="s0">&lt;/p&gt;</span>
+
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;mt-4 p-4 rounded-xl bg-zinc-900 border border-brand-border text-left text-xs space-y-1.5&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;text-zinc-400&quot;</span><span class="s0">&gt;</span><span class="s1">Авто: </span><span class="s0">&lt;span </span><span class="s2">id</span><span class="s3">=&quot;modalCar&quot; </span><span class="s2">class</span><span class="s3">=&quot;text-white font-medium&quot;</span><span class="s0">&gt;&lt;/span&gt;&lt;/div&gt;</span>
+            <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;text-zinc-400&quot;</span><span class="s0">&gt;</span><span class="s1">Услуга: </span><span class="s0">&lt;span </span><span class="s2">id</span><span class="s3">=&quot;modalService&quot; </span><span class="s2">class</span><span class="s3">=&quot;text-white font-medium&quot;</span><span class="s0">&gt;&lt;/span&gt;&lt;/div&gt;</span>
+            <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;text-zinc-400&quot;</span><span class="s0">&gt;</span><span class="s1">Телефон: </span><span class="s0">&lt;span </span><span class="s2">id</span><span class="s3">=&quot;modalPhone&quot; </span><span class="s2">class</span><span class="s3">=&quot;text-white font-medium&quot;</span><span class="s0">&gt;&lt;/span&gt;&lt;/div&gt;</span>
+            <span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;modalPriceRow&quot; </span><span class="s2">class</span><span class="s3">=&quot;text-brand-gold font-bold pt-1 border-t border-zinc-800&quot;</span><span class="s0">&gt;</span>
+                <span class="s1">Сумма со скидкой 10%: </span><span class="s0">&lt;span </span><span class="s2">id</span><span class="s3">=&quot;modalPrice&quot;</span><span class="s0">&gt;&lt;/span&gt;</span>
+            <span class="s0">&lt;/div&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+
+        <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">closeModal()</span><span class="s3">&quot; </span><span class="s2">class</span><span class="s3">=&quot;mt-6 w-full py-3 bg-brand-gold hover:bg-brand-hover text-black font-bold text-xs rounded-xl transition&quot;</span><span class="s0">&gt;</span>
+            <span class="s1">Понятно, закрыть</span>
+        <span class="s0">&lt;/button&gt;</span>
+    <span class="s0">&lt;/div&gt;</span>
+<span class="s0">&lt;/div&gt;</span>
+
+<span class="s4">&lt;!-- Интерактивная логика JS --&gt;</span>
+<span class="s0">&lt;script&gt;</span>
+    <span class="s8">const </span><span class="s1">packageData = {</span>
+        <span class="s1">basic: { name: </span><span class="s3">'Базовый уход'</span><span class="s1">, price: </span><span class="s5">24900 </span><span class="s1">},</span>
+        <span class="s1">shield: { name: </span><span class="s3">'Керамический щит'</span><span class="s1">, price: </span><span class="s5">49900 </span><span class="s1">},</span>
+        <span class="s1">total: { name: </span><span class="s3">'Total Protection'</span><span class="s1">, price: </span><span class="s5">139000 </span><span class="s1">}</span>
+    <span class="s1">};</span>
+
+    <span class="s8">let </span><span class="s1">currentSelectedKey = </span><span class="s3">'none'</span><span class="s1">;</span>
+
+    <span class="s4">// Функция клика по кнопкам карточек</span>
+    <span class="s8">function </span><span class="s1">selectPackage(key, name, price) {</span>
+        <span class="s1">currentSelectedKey = key;</span>
+        <span class="s1">updateVisuals(key);</span>
+
+        <span class="s8">const </span><span class="s1">select = document.getElementById(</span><span class="s3">'packageSelect'</span><span class="s1">);</span>
+        <span class="s1">select.value = key;</span>
+        <span class="s1">updatePriceBlock(price);</span>
+
+        <span class="s1">document.getElementById(</span><span class="s3">'booking'</span><span class="s1">).scrollIntoView({ behavior: </span><span class="s3">'smooth' </span><span class="s1">});</span>
+    <span class="s1">}</span>
+
+    <span class="s4">// Изменение через выпадающий список</span>
+    <span class="s8">function </span><span class="s1">handleSelectChange(val) {</span>
+        <span class="s1">currentSelectedKey = val;</span>
+        <span class="s1">updateVisuals(val);</span>
+
+        <span class="s8">if </span><span class="s1">(packageData[val]) {</span>
+            <span class="s1">updatePriceBlock(packageData[val].price);</span>
+        <span class="s1">} </span><span class="s8">else </span><span class="s1">{</span>
+            <span class="s1">document.getElementById(</span><span class="s3">'priceCalculationBox'</span><span class="s1">).classList.add(</span><span class="s3">'hidden'</span><span class="s1">);</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+    <span class="s4">// Подсветка активной карточки</span>
+    <span class="s8">function </span><span class="s1">updateVisuals(activeKey) {</span>
+        <span class="s1">[</span><span class="s3">'basic'</span><span class="s1">, </span><span class="s3">'shield'</span><span class="s1">, </span><span class="s3">'total'</span><span class="s1">].forEach(k =&gt; {</span>
+            <span class="s8">const </span><span class="s1">card = document.getElementById(</span><span class="s3">`card-</span><span class="s1">${k}</span><span class="s3">`</span><span class="s1">);</span>
+            <span class="s8">const </span><span class="s1">badge = document.getElementById(</span><span class="s3">`badge-</span><span class="s1">${k}</span><span class="s3">`</span><span class="s1">);</span>
+            <span class="s8">if </span><span class="s1">(!card) </span><span class="s8">return</span><span class="s1">;</span>
+
+            <span class="s8">if </span><span class="s1">(k === activeKey) {</span>
+                <span class="s1">card.classList.add(</span><span class="s3">'selected'</span><span class="s1">);</span>
+                <span class="s8">if </span><span class="s1">(badge) badge.classList.remove(</span><span class="s3">'hidden'</span><span class="s1">);</span>
+            <span class="s1">} </span><span class="s8">else </span><span class="s1">{</span>
+                <span class="s1">card.classList.remove(</span><span class="s3">'selected'</span><span class="s1">);</span>
+                <span class="s8">if </span><span class="s1">(badge) badge.classList.add(</span><span class="s3">'hidden'</span><span class="s1">);</span>
+            <span class="s1">}</span>
+        <span class="s1">});</span>
+    <span class="s1">}</span>
+
+    <span class="s4">// Расчет скидки в реальном времени</span>
+    <span class="s8">function </span><span class="s1">updatePriceBlock(price) {</span>
+        <span class="s8">const </span><span class="s1">box = document.getElementById(</span><span class="s3">'priceCalculationBox'</span><span class="s1">);</span>
+        <span class="s8">const </span><span class="s1">discount = Math.round(price * </span><span class="s5">0.10</span><span class="s1">);</span>
+        <span class="s8">const </span><span class="s1">finalPrice = price - discount;</span>
+
+        <span class="s1">document.getElementById(</span><span class="s3">'basePriceDisplay'</span><span class="s1">).textContent = price.toLocaleString(</span><span class="s3">'ru-RU'</span><span class="s1">) + </span><span class="s3">' ₽'</span><span class="s1">;</span>
+        <span class="s1">document.getElementById(</span><span class="s3">'discountDisplay'</span><span class="s1">).textContent = </span><span class="s3">'-' </span><span class="s1">+ discount.toLocaleString(</span><span class="s3">'ru-RU'</span><span class="s1">) + </span><span class="s3">' ₽'</span><span class="s1">;</span>
+        <span class="s1">document.getElementById(</span><span class="s3">'finalPriceDisplay'</span><span class="s1">).textContent = finalPrice.toLocaleString(</span><span class="s3">'ru-RU'</span><span class="s1">) + </span><span class="s3">' ₽'</span><span class="s1">;</span>
+
+        <span class="s1">box.classList.remove(</span><span class="s3">'hidden'</span><span class="s1">);</span>
+    <span class="s1">}</span>
+
+    <span class="s4">// Отправка формы и вывод модального окна</span>
+    <span class="s8">function </span><span class="s1">submitForm(e) {</span>
+        <span class="s1">e.preventDefault();</span>
+
+        <span class="s8">const </span><span class="s1">car = document.getElementById(</span><span class="s3">'carModel'</span><span class="s1">).value;</span>
+        <span class="s8">const </span><span class="s1">phone = document.getElementById(</span><span class="s3">'userPhone'</span><span class="s1">).value;</span>
+        <span class="s8">const </span><span class="s1">select = document.getElementById(</span><span class="s3">'packageSelect'</span><span class="s1">);</span>
+        <span class="s8">const </span><span class="s1">serviceName = select.options[select.selectedIndex].text;</span>
+
+        <span class="s1">document.getElementById(</span><span class="s3">'modalCar'</span><span class="s1">).textContent = car;</span>
+        <span class="s1">document.getElementById(</span><span class="s3">'modalPhone'</span><span class="s1">).textContent = phone;</span>
+        <span class="s1">document.getElementById(</span><span class="s3">'modalService'</span><span class="s1">).textContent = serviceName;</span>
+
+        <span class="s8">const </span><span class="s1">priceRow = document.getElementById(</span><span class="s3">'modalPriceRow'</span><span class="s1">);</span>
+        <span class="s8">if </span><span class="s1">(packageData[currentSelectedKey]) {</span>
+            <span class="s8">const </span><span class="s1">discounted = packageData[currentSelectedKey].price * </span><span class="s5">0.9</span><span class="s1">;</span>
+            <span class="s1">document.getElementById(</span><span class="s3">'modalPrice'</span><span class="s1">).textContent = discounted.toLocaleString(</span><span class="s3">'ru-RU'</span><span class="s1">) + </span><span class="s3">' ₽'</span><span class="s1">;</span>
+            <span class="s1">priceRow.classList.remove(</span><span class="s3">'hidden'</span><span class="s1">);</span>
+        <span class="s1">} </span><span class="s8">else </span><span class="s1">{</span>
+            <span class="s1">priceRow.classList.add(</span><span class="s3">'hidden'</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s1">document.getElementById(</span><span class="s3">'modalOverlay'</span><span class="s1">).classList.remove(</span><span class="s3">'hidden'</span><span class="s1">);</span>
+    <span class="s1">}</span>
+
+    <span class="s4">// Закрытие модального окна и сброс полей</span>
+    <span class="s8">function </span><span class="s1">closeModal() {</span>
+        <span class="s1">document.getElementById(</span><span class="s3">'modalOverlay'</span><span class="s1">).classList.add(</span><span class="s3">'hidden'</span><span class="s1">);</span>
+        <span class="s1">document.getElementById(</span><span class="s3">'orderForm'</span><span class="s1">).reset();</span>
+        <span class="s1">handleSelectChange(</span><span class="s3">'none'</span><span class="s1">);</span>
+    <span class="s1">}</span>
+<span class="s0">&lt;/script&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span></pre>
+</body>
+</html>
