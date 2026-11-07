@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLACK LINE × РОЛЬФ | Детейлинг студия</title>
+
+  <!-- Подключение Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#eab308',
+              hover: '#ca8a04',
+              accent: '#facc15',
+              dark: '#0a0a0c',
+              card: '#141418',
+              cardHover: '#1a1a20',
+              border: '#27272a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .package-card {
+      transition: all 0.25s ease;
+    }
+    .package-card.selected {
+      border-color: #eab308 !important;
+      box-shadow: 0 0 30px rgba(234, 179, 8, 0.25);
+      transform: translateY(-4px);
+    }
+  </style>
+</head>
+
+<body class="bg-brand-dark text-zinc-100 font-sans antialiased selection:bg-brand-gold selection:text-black min-h-screen flex flex-col justify-between">
+
+  <!-- Фиксированная шапка сайта -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="#" class="text-base sm:text-lg font-black tracking-widest text-white flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-brand-gold animate-pulse"></span>
+        BLACK<span class="text-brand-gold">LINE</span>
+        <span class="text-zinc-500 font-normal text-xs sm:text-sm hidden sm:inline">× РОЛЬФ Ясенево</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm text-zinc-400">
+        <a href="#services" class="hover:text-white transition">Услуги</a>
+        <a href="#packages" class="hover:text-white transition">Пакеты и цены</a>
+        <a href="#location" class="hover:text-white transition">Локация</a>
+        <a href="#booking" class="hover:text-white transition">Запись</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="tel:+74951278386" class="text-xs sm:text-sm font-semibold text-zinc-300 hover:text-brand-gold transition whitespace-nowrap">
+          +7 (495) 127-83-86
+        </a>
+
+        <a href="https://wa.me/74951278386" target="_blank" 
+           class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-semibold hover:bg-emerald-500/20 transition">
+          <span>WhatsApp</span>
+        </a>
+
+        <a href="#booking" class="bg-brand-gold hover:bg-brand-hover text-black text-xs font-bold py-2 px-3.5 rounded-lg transition">
+          Записаться
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow pt-24">
+    <!-- Hero Секция -->
+    <section class="py-12 sm:py-20 px-4 max-w-5xl mx-auto text-center flex flex-col items-center">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-brand-border text-xs text-brand-gold mb-6 font-medium">
+        <span>📍 РОЛЬФ Ясенево • Москва, МКАД 40-й км, вл. 7</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight max-w-4xl">
+        Премиальный детейлинг авто с гарантией <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-amber-200">до 5 лет</span>
+      </h1>
+
+      <p class="mt-4 text-zinc-400 text-sm sm:text-base max-w-2xl">
+        Защитная оклейка премиальным полиуретаном, глубокая восстановительная полировка и керамические составы 9H на базе официального сервисного центра.
+      </p>
+
+      <div class="grid grid-cols-3 gap-3 w-full max-w-xl mt-8">
+        <div class="p-3 rounded-xl bg-brand-card border border-brand-border">
+          <div class="text-xl sm:text-2xl font-bold text-brand-gold">1 200+</div>
+          <div class="text-[11px] sm:text-xs text-zinc-400 mt-1">Авто защищено</div>
+        </div>
+        <div class="p-3 rounded-xl bg-brand-card border border-brand-border">
+          <div class="text-xl sm:text-2xl font-bold text-brand-gold">5 лет</div>
+          <div class="text-[11px] sm:text-xs text-zinc-400 mt-1">Гарантия на пленку</div>
+        </div>
+        <div class="p-3 rounded-xl bg-brand-card border border-brand-border">
+          <div class="text-xl sm:text-2xl font-bold text-brand-gold">24/7</div>
+          <div class="text-[11px] sm:text-xs text-zinc-400 mt-1">Охраняемый бокс</div>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+        <a href="#packages" class="bg-brand-gold hover:bg-brand-hover text-black font-bold py-3.5 px-8 rounded-xl transition text-center shadow-lg shadow-brand-gold/20">
+          Выбрать комплекс
+        </a>
+        <a href="#booking" class="bg-zinc-900 hover:bg-zinc-800 border border-brand-border text-white font-medium py-3.5 px-8 rounded-xl transition text-center">
+          Получить скидку 10%
+        </a>
+      </div>
+    </section>
+
+    <!-- Секция Услуг -->
+    <section id="services" class="py-16 px-4 max-w-6xl mx-auto border-t border-brand-border/60">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Услуги детейлинг-центра</h2>
+        <p class="text-sm text-zinc-400 mt-2">Работаем только с сертифицированной автохимией и полиуретаном премиум-класса</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-gold/50 transition duration-300">
+          <div class="w-12 h-12 rounded-xl bg-zinc-900 flex items-center justify-center text-brand-gold mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white">Бронепленка (PPF)</h3>
+          <p class="text-zinc-400 text-xs sm:text-sm mt-2 leading-relaxed">Надежная защита кузова от гравия, пескоструя и царапин с эффектом самозаживления от тепла.</p>
+          <div class="mt-4 pt-4 border-t border-brand-border flex items-center justify-between text-xs">
+            <span class="text-zinc-400">Срок: от 2 дней</span>
+            <span class="text-brand-gold font-bold text-sm">от 45 000 ₽</span>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-gold/50 transition duration-300">
+          <div class="w-12 h-12 rounded-xl bg-zinc-900 flex items-center justify-center text-brand-gold mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white">Восстановительная полировка</h3>
+          <p class="text-zinc-400 text-xs sm:text-sm mt-2 leading-relaxed">Удаление до 95% микропаутинки и голограмм. Возвращение глубокого зеркального блеска заводского лака.</p>
+          <div class="mt-4 pt-4 border-t border-brand-border flex items-center justify-between text-xs">
+            <span class="text-zinc-400">Срок: от 1 дня</span>
+            <span class="text-brand-gold font-bold text-sm">от 16 000 ₽</span>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-gold/50 transition duration-300">
+          <div class="w-12 h-12 rounded-xl bg-zinc-900 flex items-center justify-center text-brand-gold mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white">Керамика 9H</h3>
+          <p class="text-zinc-400 text-xs sm:text-sm mt-2 leading-relaxed">Экстремальный гидрофобный щит: кузов дольше остается чистым, защищен от выгорания на солнце и дорожной химии.</p>
+          <div class="mt-4 pt-4 border-t border-brand-border flex items-center justify-between text-xs">
+            <span class="text-zinc-400">Срок: 1 день</span>
+            <span class="text-brand-gold font-bold text-sm">от 22 000 ₽</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция Пакетов с интерактивным выбором -->
+    <section id="packages" class="py-16 px-4 max-w-6xl mx-auto border-t border-brand-border/60">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Комплексные пакеты</h2>
+        <p class="text-sm text-zinc-400 mt-2">Выберите пакет в один клик — форма записи заполнится и рассчитает скидку автоматически</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Карточка 1 -->
+        <div id="card-basic" class="package-card bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-bold text-white">Базовый уход</h3>
+              <span id="badge-basic" class="hidden text-[10px] font-bold bg-brand-gold text-black px-2 py-0.5 rounded-full uppercase">✓ Выбран</span>
+            </div>
+            <p class="text-xs text-zinc-400 mt-1">Освежить автомобиль к сезону</p>
+            <div class="text-3xl font-black text-white mt-5">24 900 ₽</div>
+
+            <ul class="mt-6 space-y-2.5 text-xs text-zinc-300">
+              <li class="flex items-center gap-2">✓ Трехфазная детейлинг-мойка</li>
+              <li class="flex items-center gap-2">✓ Антиголограммная полировка кузова</li>
+              <li class="flex items-center gap-2">✓ Кварцевое гидрофобное покрытие</li>
+              <li class="flex items-center gap-2">✓ Комплексная влажная уборка салона</li>
+            </ul>
+          </div>
+
+          <button type="button" 
+                  onclick="selectPackage('basic', 'Базовый уход', 24900)" 
+                  class="select-btn mt-6 w-full py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-brand-border font-bold text-xs text-white transition">
+            Выбрать пакет
+          </button>
+        </div>
+
+        <!-- Карточка 2 (Хит) -->
+        <div id="card-shield" class="package-card bg-brand-card border-2 border-brand-gold/60 rounded-2xl p-6 flex flex-col justify-between relative shadow-xl shadow-brand-gold/5">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-gold text-black text-[10px] font-black uppercase tracking-wider py-0.5 px-3 rounded-full">
+            Топ выбор
+          </span>
+          <div>
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-bold text-white">Керамический щит</h3>
+              <span id="badge-shield" class="hidden text-[10px] font-bold bg-brand-gold text-black px-2 py-0.5 rounded-full uppercase">✓ Выбран</span>
+            </div>
+            <p class="text-xs text-zinc-400 mt-1">Восстановление глянца и защита 9H</p>
+            <div class="text-3xl font-black text-brand-gold mt-5">49 900 ₽</div>
+
+            <ul class="mt-6 space-y-2.5 text-xs text-zinc-200">
+              <li class="flex items-center gap-2">✓ Глубокая абразивная полировка кузова</li>
+              <li class="flex items-center gap-2">✓ 2 слоя керамического покрытия 9H</li>
+              <li class="flex items-center gap-2">✓ Покрытие «Антидождь» на все стекла</li>
+              <li class="flex items-center gap-2">✓ Уход и консервация кожи салона</li>
+            </ul>
+          </div>
+
+          <button type="button" 
+                  onclick="selectPackage('shield', 'Керамический щит', 49900)" 
+                  class="select-btn mt-6 w-full py-3 rounded-xl bg-brand-gold hover:bg-brand-hover text-black font-extrabold text-xs transition">
+            Выбрать пакет
+          </button>
+        </div>
+
+        <!-- Карточка 3 -->
+        <div id="card-total" class="package-card bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-bold text-white">Total Protection</h3>
+              <span id="badge-total" class="hidden text-[10px] font-bold bg-brand-gold text-black px-2 py-0.5 rounded-full uppercase">✓ Выбран</span>
+            </div>
+            <p class="text-xs text-zinc-400 mt-1">Бронирование кузова полиуретаном</p>
+            <div class="text-3xl font-black text-white mt-5">139 000 ₽</div>
+
+            <ul class="mt-6 space-y-2.5 text-xs text-zinc-300">
+              <li class="flex items-center gap-2">✓ Оклейка передней части авто в PPF</li>
+              <li class="flex items-center gap-2">✓ Керамика на остальные зоны кузова</li>
+              <li class="flex items-center gap-2">✓ Детейлинг салона с озонацией</li>
+              <li class="flex items-center gap-2">✓ Гарантийная поддержка 3 года</li>
+            </ul>
+          </div>
+
+          <button type="button" 
+                  onclick="selectPackage('total', 'Total Protection', 139000)" 
+                  class="select-btn mt-6 w-full py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-brand-border font-bold text-xs text-white transition">
+            Выбрать пакет
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Секция Формы -->
+    <section id="booking" class="py-16 px-4 max-w-2xl mx-auto border-t border-brand-border/60">
+      <div class="bg-brand-card border border-brand-border p-6 sm:p-8 rounded-3xl shadow-2xl">
+        <h2 class="text-2xl font-bold text-center text-white">Запись на детейлинг</h2>
+        <p class="text-xs text-zinc-400 text-center mt-1">Оставьте заявку и зафиксируйте скидку 10% на первый заказ</p>
+
+        <form id="orderForm" onsubmit="submitForm(event)" class="mt-8 space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-zinc-400 uppercase mb-1">Марка и модель автомобиля</label>
+            <input type="text" id="carModel" required placeholder="Например: BMW M5 / Geely Monjaro"
+                   class="w-full bg-zinc-900 border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-zinc-400 uppercase mb-1">Номер телефона</label>
+            <input type="tel" id="userPhone" required placeholder="+7 (___) ___-__-__"
+                   class="w-full bg-zinc-900 border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-zinc-400 uppercase mb-1">Выбранный комплекс</label>
+            <select id="packageSelect" onchange="handleSelectChange(this.value)"
+                    class="w-full bg-zinc-900 border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition">
+              <option value="none">Индивидуальный расчет / Другая услуга</option>
+              <option value="basic">Комплекс «Базовый уход» (24 900 ₽)</option>
+              <option value="shield">Комплекс «Керамический щит» (49 900 ₽)</option>
+              <option value="total">Комплекс «Total Protection» (139 000 ₽)</option>
+            </select>
+          </div>
+
+          <!-- Блок интерактивного расчета цены -->
+          <div id="priceCalculationBox" class="hidden p-4 rounded-xl bg-zinc-900 border border-brand-border space-y-1 text-xs">
+            <div class="flex justify-between text-zinc-400">
+              <span>Базовая стоимость:</span>
+              <span id="basePriceDisplay" class="font-medium text-white">0 ₽</span>
+            </div>
+            <div class="flex justify-between text-emerald-400 font-medium">
+              <span>Скидка при бронировании онлайн (-10%):</span>
+              <span id="discountDisplay">-0 ₽</span>
+            </div>
+            <div class="pt-2 border-t border-brand-border flex justify-between text-sm font-bold text-brand-gold">
+              <span>Итого со скидкой:</span>
+              <span id="finalPriceDisplay">0 ₽</span>
+            </div>
+          </div>
+
+          <button type="submit" 
+                  class="w-full bg-brand-gold hover:bg-brand-hover text-black font-extrabold py-3.5 rounded-xl text-sm transition duration-200 mt-2">
+            Забронировать со скидкой 10%
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Секция Контакты и реальная локация РОЛЬФ Ясенево -->
+    <section id="location" class="py-12 px-4 max-w-6xl mx-auto border-t border-brand-border/60">
+      <div class="bg-brand-card border border-brand-border rounded-3xl p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-3 text-center md:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-brand-border text-xs text-brand-gold font-medium">
+            📍 Официальный дилерский комплекс
+          </div>
+          <h3 class="text-2xl font-bold text-white">РОЛЬФ Ясенево</h3>
+          <p class="text-zinc-400 text-sm max-w-md">
+            г. Москва, МКАД, 40-й километр, вл. 7<br />
+            <span class="text-xs text-zinc-500">Удобный съезд со МКАД, бесплатная гостевая парковка и зона отдыха</span>
+          </p>
+          <div class="text-sm text-zinc-300 font-medium">
+            Режим работы: ежедневно с 09:00 до 21:00
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+          <a href="https://yandex.ru/maps/?text=Москва+МКАД+40-й+километр+вл7+РОЛЬФ+Ясенево" target="_blank" 
+             class="py-3 px-6 bg-zinc-900 hover:bg-zinc-800 border border-brand-border text-white text-xs font-bold rounded-xl text-center transition flex items-center justify-center gap-2">
+            <span>🗺️ Маршрут в Яндекс Картах</span>
+          </a>
+
+          <a href="tel:+74951278386" 
+             class="py-3 px-6 bg-brand-gold hover:bg-brand-hover text-black text-xs font-extrabold rounded-xl text-center transition">
+            Позвонить в салон
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Футер -->
+  <footer class="border-t border-brand-border py-8 px-4 text-xs text-zinc-500">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div>
+        <span class="font-bold text-white text-sm">BLACK<span class="text-brand-gold">LINE</span> × РОЛЬФ</span>
+        <span class="block sm:inline sm:ml-2">Москва, МКАД 40-й км, вл. 7</span>
+      </div>
+      <div class="flex gap-4">
+        <a href="tel:+74951278386" class="hover:text-white transition">+7 (495) 127-83-86</a>
+        <a href="https://wa.me/74951278386" target="_blank" class="hover:text-emerald-400 transition">WhatsApp</a>
+      </div>
+      <div>© 2026. Все права защищены.</div>
+    </div>
+  </footer>
+
+  <!-- Модальное окно подтверждения -->
+  <div id="modalOverlay" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+    <div class="bg-brand-card border border-brand-gold/40 rounded-2xl p-6 sm:p-8 max-w-md w-full shadow-2xl text-center">
+      <div class="w-12 h-12 rounded-full bg-brand-gold/10 border border-brand-gold text-brand-gold flex items-center justify-center mx-auto text-xl mb-4">
+        ✓
+      </div>
+      <h3 class="text-xl font-bold text-white">Заявка успешно принята!</h3>
+      <p class="text-xs text-zinc-400 mt-2">Информация передана мастеру-приемщику РОЛЬФ Ясенево. Перезвоним в течение 10 минут для подтверждения времени визита.</p>
+
+      <div class="mt-4 p-4 rounded-xl bg-zinc-900 border border-brand-border text-left text-xs space-y-1.5">
+        <div class="text-zinc-400">Авто: <span id="modalCar" class="text-white font-medium"></span></div>
+        <div class="text-zinc-400">Услуга: <span id="modalService" class="text-white font-medium"></span></div>
+        <div class="text-zinc-400">Телефон: <span id="modalPhone" class="text-white font-medium"></span></div>
+        <div id="modalPriceRow" class="text-brand-gold font-bold pt-1 border-t border-zinc-800">
+          Сумма со скидкой 10%: <span id="modalPrice"></span>
+        </div>
+      </div>
+
+      <button onclick="closeModal()" class="mt-6 w-full py-3 bg-brand-gold hover:bg-brand-hover text-black font-bold text-xs rounded-xl transition">
+        Понятно, закрыть
+      </button>
+    </div>
+  </div>
+
+  <!-- Интерактивная логика JS -->
+  <script>
+    const packageData = {
+      basic: { name: 'Базовый уход', price: 24900 },
+      shield: { name: 'Керамический щит', price: 49900 },
+      total: { name: 'Total Protection', price: 139000 }
+    };
+
+    let currentSelectedKey = 'none';
+
+    function selectPackage(key, name, price) {
+      currentSelectedKey = key;
+      updateVisuals(key);
+
+      const select = document.getElementById('packageSelect');
+      select.value = key;
+      updatePriceBlock(price);
+
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function handleSelectChange(val) {
+      currentSelectedKey = val;
+      updateVisuals(val);
+
+      if (packageData[val]) {
+        updatePriceBlock(packageData[val].price);
+      } else {
+        document.getElementById('priceCalculationBox').classList.add('hidden');
+      }
+    }
+
+    function updateVisuals(activeKey) {
+      ['basic', 'shield', 'total'].forEach(k => {
+        const card = document.getElementById(`card-${k}`);
+        const badge = document.getElementById(`badge-${k}`);
+        if (!card) return;
+
+        if (k === activeKey) {
+          card.classList.add('selected');
+          if (badge) badge.classList.remove('hidden');
+        } else {
+          card.classList.remove('selected');
+          if (badge) badge.classList.add('hidden');
+        }
+      });
+    }
+
+    function updatePriceBlock(price) {
+      const box = document.getElementById('priceCalculationBox');
+      const discount = Math.round(price * 0.10);
+      const finalPrice = price - discount;
+
+      document.getElementById('basePriceDisplay').textContent = price.toLocaleString('ru-RU') + ' ₽';
+      document.getElementById('discountDisplay').textContent = '-' + discount.toLocaleString('ru-RU') + ' ₽';
+      document.getElementById('finalPriceDisplay').textContent = finalPrice.toLocaleString('ru-RU') + ' ₽';
+
+      box.classList.remove('hidden');
+    }
+
+    function submitForm(e) {
+      e.preventDefault();
+
+      const car = document.getElementById('carModel').value;
+      const phone = document.getElementById('userPhone').value;
+      const select = document.getElementById('packageSelect');
+      const serviceName = select.options[select.selectedIndex].text;
+
+      document.getElementById('modalCar').textContent = car;
+      document.getElementById('modalPhone').textContent = phone;
+      document.getElementById('modalService').textContent = serviceName;
+
+      const priceRow = document.getElementById('modalPriceRow');
+      if (packageData[currentSelectedKey]) {
+        const discounted = packageData[currentSelectedKey].price * 0.9;
+        document.getElementById('modalPrice').textContent = discounted.toLocaleString('ru-RU') + ' ₽';
+        priceRow.classList.remove('hidden');
+      } else {
+        priceRow.classList.add('hidden');
+      }
+
+      document.getElementById('modalOverlay').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('modalOverlay').classList.add('hidden');
+      document.getElementById('orderForm').reset();
+      handleSelectChange('none');
+    }
+  </script>
+</body>
+</html>
